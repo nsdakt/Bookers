@@ -2,22 +2,23 @@
   <head></head>
 
   <body>
-   <h1>Books#index</h1>
-   <p>Find me in app/views/books/index.html.erb</p>
-
-
       <h1>Books</h1>
       <%= @books.each do |book| %>
 
       <b>Title</b>
-      <span><%= book.title %></span>
+      <span> <%= book.title %></span>
 
       <b>Body</b>
       <span><%= book.body %></span>
 
+      <%= link_to "Show", book_path(book.id) %>
+
+      <%= link_to "Edit", edit_book_path(book.id) %>
+
+      <%= link_to "Destroy", book_path(book.id), method: :delete %>
+
 
       <% end %>
-
 
     <footer></footer>
   </body>
