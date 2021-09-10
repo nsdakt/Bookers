@@ -8,9 +8,11 @@
 }
 
 body {
-    color: #333;
+    color: #;
     font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
     line-height: 18px;
+    margin: 33px;
 }
 
 h1 {
@@ -23,8 +25,13 @@ h1 {
     font-weight: bold;
 }
 
+strong {
+    font-weight: bold;
+}
+
 p {
     display: block;
+    margin: 33px;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
