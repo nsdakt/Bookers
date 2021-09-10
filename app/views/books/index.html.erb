@@ -3,22 +3,45 @@
 
   <body>
       <h1>Books</h1>
-      <%= @books.each do |book| %>
-
       <b>Title</b>
+      <b>Body</b>
+
+      <% @books.each do |book| %>
+
       <span> <%= book.title %></span>
 
-      <b>Body</b>
       <span><%= book.body %></span>
 
       <%= link_to "Show", book_path(book.id) %>
 
       <%= link_to "Edit", edit_book_path(book.id) %>
 
-      <%= link_to "Destroy", book_path(book.id), method: :delete %>
+      <%= link_to "Destroy", book_path(book.id), method: :delete, "data-confirm" => "Are you sure？"  %>
 
 
       <% end %>
+
+
+      <h2>New book</h2>
+<% if @book.errors.any? %>
+ <% @book.errors.count %>errors prohibited this book from being saved:
+ <% @book.errors.full_messages.each do |message| %>
+  <%= message %>
+  <% end %>
+<% end %>
+
+<%= form_with model:@book, url:'/books', local:true do |f| %>
+
+<p>Title</p>
+<%= f.text_field :title %>
+
+<p>Body</p>
+<%= f.text_area :body %>
+
+<%= f.submit 'Create Book' %>
+
+<% end %>
+
 
     <footer></footer>
   </body>

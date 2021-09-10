@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get 'top' => 'homes#top'
   root to: 'homes#top'
   resources :books
+  root to: 'books#index'
 end
