@@ -23,7 +23,6 @@ class BooksController < ApplicationController
       flash.now[:alert] = "Title can't be blank"
       render :new
     end
-
   end
 
   def edit
