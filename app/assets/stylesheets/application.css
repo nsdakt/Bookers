@@ -13,23 +13,102 @@
  *= require_tree .
  *= require_self
  */
- * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  color: #6c6b6b;
- }
- 
- body {
-     color: #333;
-     font-family: verdana, arial, helvetica, sans-serif;
-     font-size: 13px;
-     line-height: 18px;
-     margin: 33px;
-     
- }
- 
-    
- a {
-  text-decoration: none;
+
+html {
+  display: block;
 }
+
+body {
+  background-color: #fff;
+    color: #333;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 33px;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.notice {
+  color: green;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+p, ol, ul, td {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 33px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+
+
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+td {
+    padding-bottom: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+a {
+    color: #000;
+}
+
+a:-webkit-any-link {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+div.field, div.actions {
+    margin-bottom: 10px;
+}
+label {
+    display: block;
+}
+
+

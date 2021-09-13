@@ -1,23 +1,26 @@
+<!DOCTYPE html>
 <html>
- <head>
-   <title>WebCampBackendNew</title>
-   <meta name="csrf-param" content="authenticity_token">
-   <meta name="csrf-token" content="y8MqYeVYyBkHKELmFoH+D3VKEqU4UMLWnyaM0J3w3N0oBpXwsEtiGbDxyucndLxN/6CsF/NBB5hhnFHb9l7QZg==">
-   <script src="/assets/application-114264dd93c8ff30e4335b71eed7949d66c4e7a8eb62e2de6284c046fe07104b.js" data-turbolinks-track="reload"></script>
-   <link rel="stylesheet" media="all" href="/assets/homes.scss" data-turbolinks-track="reload">
- </head>
- 
- <body>
-  <h1>ようこそ&nbsp<strong>Bookers</strong>&nbspへ！</h1>
+  <head>
+    <title><%= @page_title %></title>
+     <%= csrf_meta_tags %>
+     <%= csp_meta_tag %>
+
+     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+   <h1>ようこそ&nbsp<strong>Bookers</strong>&nbspへ！</h1>
 
 
-  <p>
-   <strong>Bookers</strong>&nbspでは、さまざまな書籍に関するあなたの意見や
-  </p>
-  <p>印象を共有し交換することができます</p>
+   <p>
+    <strong>Bookers</strong>&nbspでは、さまざまな書籍に関するあなたの意見や
+   </p>
+   <p>印象を共有し交換することができます</p>
 
-  <p>
-   <%= link_to 'start', books_path %>
-  </p>
+   <p>
+    <%= link_to 'start', books_path %>
+   </p>
 
- </body>
+  </body>
+</html>

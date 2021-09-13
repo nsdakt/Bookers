@@ -1,20 +1,36 @@
-<h1>Editing Book</h1>
-<% if @book.errors.any? %>
- <% @book.errors.count %>errors prohibited this book from being saved:
- <% @book.errors.full_messages.each do |message| %>
-  <%= message %>
-  <% end %>
-<% end %>
-<%= form_with model:@book, url:"/books/#{@book.id}", local:true do |f| %>
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>WebCampBackendNew</title>
+ </head>
 
-<p>Title</p>
-<%= f.text_field :title %>
+ <body>
+   <h1>Editing Book</h1>
+   <% if @book.errors.any? %>
+   <% @book.errors.count %>errors prohibited this book from being saved:
+   <% @book.errors.full_messages.each do |message| %>
+    <%= message id:notice %>
+    <% end %>
+   <% end %>
 
-<p>Body</p>
-<%= f.text_area :body %>
+   <%= form_with model:@book, url:"/books/#{@book.id}", local:true do |f| %>
 
-<%= f.submit 'Update Book' %>
+   <div class="field">
+    <label for="book_title">Title</label></br>
+    <%= f.text_field :title %>
+   </div>
 
-<%= link_to "Show", book_path(@book.id) %>|<%= link_to "Back", books_path %>
+   <div class="field">
+    <label for="book_body">Body</label></br>
+    <%= f.text_area :body %>
+   </div>
 
-<% end %>
+   <div class="action">
+    <%= f.submit 'Update Book' %>
+   </div>
+   <%= link_to "Show", book_path(@book.id) %>|<%= link_to "Back", books_path %>
+
+   <% end %>
+
+  </body>
+</html>
