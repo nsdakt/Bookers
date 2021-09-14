@@ -1,3 +1,5 @@
+  <p id="notice"></p>
+  <h1>Books</h1>
   <table>
     <thead>
       <tr>
@@ -31,11 +33,13 @@
   <% end %>
   <%= form_with class:'new_book', id:'new_book', model:@book, url:'/books', local:true do |f| %>
   <div class="field">
-   <%= f.label :Title %></br>
+   <%= f.label :Title %>
+   </br>
    <%= f.text_field :title %>
   </div>
   <div class="field">
-   <%= f.label :Body %></br>
+   <%= f.label :Body %>
+   </br>
    <%= f.text_area :body %>
   </div>
   <div class="actions"><%= f.submit 'Create Book' %>
