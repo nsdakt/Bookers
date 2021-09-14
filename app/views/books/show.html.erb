@@ -1,25 +1,15 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>WebCampBackendNew</title>
-  </head>
-
-  <body>
-    <% flash.each do |key, value| %>
-    <p class="notice<%= key %>">
-      <%= value %>
-    </p>
-    <% end %>
-    <p>
-      <strong>Title:</strong>
+  <% flash.each do |key, value| %>
+  <p class="notice">
+   <%= value %>
+  </p>
+  <% end %>
+  <p>
+    <strong>Title:</strong>
       <%= @book.title %>
-    </p>
+  </p>
 
-    <p>
-      <strong>Body:</strong>
-      <%= @book.body %>
-    </p>
-    <%= link_to "Edit", edit_book_path(@book) %>|<%= link_to "Back", books_path %>
-  </body>
-
-</html>
+  <p>
+    <strong>Body:</strong>
+    <%= @book.body %>
+  </p>
+  <%= link_to "Edit", edit_book_path(@book) %>|<%= link_to "Back", books_path %>

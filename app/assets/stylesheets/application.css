@@ -104,11 +104,4 @@ a:-webkit-any-link {
     text-decoration: underline;
 }
 
-div.field, div.actions {
-    margin-bottom: 10px;
-}
-label {
-    display: block;
-}
-
 
